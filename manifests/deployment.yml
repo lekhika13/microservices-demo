@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: lekhikamicroservicesdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lekhikamicroservicesdemo 
+    spec:
+      containers:
+        - name: lekhikamicroservicesdemo 
+          image: my11registry.azurecr.io/lekhikamicroservicesdemo
+          ports:
+          - containerPort: 80
